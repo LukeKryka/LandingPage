@@ -4,94 +4,88 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Luke Kryka — Data Analyst</title>
-  <meta name="description" content="Software engineer portfolio showcasing highlighted GitHub projects, skills, and contact information for recruiters." />
+  <meta name="description" content="Portfolio of Luke Kryka — Data Analyst. Selected projects, skills, and contact info." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Luke Kryka — Data Analyst" />
   <meta property="og:description" content="Highlighted GitHub projects, skills, and contact information." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://LukeKryka.github.io" />
-  <meta property="og:image" content="https://LukeKryka.github.io/og-image.png" />
+  <meta property="og:url" content="https://lukekryka.github.io" />
+  <meta property="og:image" content="https://lukekryka.github.io/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Luke Kryka — Data Analyst" />
   <meta name="twitter:description" content="Highlighted GitHub projects, skills, and contact information." />
-  <meta name="twitter:image" content="https://LukeKryka.github.io/og-image.png" />
+  <meta name="twitter:image" content="https://lukekryka.github.io/og-image.png" />
 
   <link rel="icon" href="/favicon.ico" />
   <style>
     :root{
-      --bg: #0b0d10;
-      --panel: #11151a;
-      --muted: #93a1b3;
-      --text: #e5ecf4;
-      --brand: #7cc0ff;
-      --accent: #b28cff;
-      --ring: rgba(124,192,255,.55);
-      --ok: #36d399; --warn:#f4bd50; --err:#f87272;
+      --bg:#0b0d10; --panel:#11151a; --muted:#93a1b3; --text:#e5ecf4; --brand:#7cc0ff; --accent:#b28cff; --ring:rgba(124,192,255,.55);
+      --ok:#36d399; --warn:#f4bd50; --err:#f87272;
     }
     @media (prefers-color-scheme: light){
-      :root{ --bg:#f7f9fc; --panel:#ffffff; --muted:#5a6b82; --text:#0b0d10; --brand:#2563eb; --accent:#7c3aed; --ring: rgba(37,99,235,.35); }
-      .card{ box-shadow: 0 6px 20px rgba(16,24,40,.08); }
+      :root{ --bg:#f7f9fc; --panel:#ffffff; --muted:#5a6b82; --text:#0b0d10; --brand:#2563eb; --accent:#7c3aed; --ring:rgba(37,99,235,.35) }
+      .card{ box-shadow:0 6px 20px rgba(16,24,40,.08) }
     }
     *{ box-sizing:border-box }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji" }
     a{ color:var(--brand); text-decoration:none }
     a:hover{ text-decoration:underline }
-    .container{ width:min(1100px, 92vw); margin-inline:auto; }
-    header{ position:sticky; top:0; backdrop-filter:saturate(180%) blur(10px); background:color-mix(in oklab, var(--bg), transparent 25%); border-bottom:1px solid color-mix(in oklab, var(--text), transparent 85%); z-index:10 }
+    .container{ width:min(1100px,92vw); margin-inline:auto }
+    header{ position:sticky; top:0; backdrop-filter:saturate(180%) blur(10px); background:color-mix(in oklab,var(--bg),transparent 25%); border-bottom:1px solid color-mix(in oklab,var(--text),transparent 85%); z-index:10 }
     nav{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 0 }
     .brand{ display:flex; align-items:center; gap:.7rem; font-weight:700; letter-spacing:.2px }
-    .pill{ padding:.25rem .6rem; font-size:.8rem; background:color-mix(in oklab, var(--brand), transparent 85%); color:var(--brand); border:1px solid color-mix(in oklab, var(--brand), transparent 60%); border-radius:999px }
+    .pill{ padding:.25rem .6rem; font-size:.8rem; background:color-mix(in oklab,var(--brand),transparent 85%); color:var(--brand); border:1px solid color-mix(in oklab,var(--brand),transparent 60%); border-radius:999px }
     .navlinks a{ margin-left:1rem; font-weight:600 }
 
-    .hero{ display:grid; grid-template-columns: 1.2fr .8fr; gap:2rem; align-items:center; padding:3.25rem 0 }
-    .hero h1{ font-size:clamp(2rem, 2.5rem + 1vw, 3.4rem); line-height:1.1; margin:.2rem 0 1rem }
-    .lede{ color:var(--muted); font-size:1.05rem; }
+    .hero{ display:grid; grid-template-columns:1.2fr .8fr; gap:2rem; align-items:center; padding:3.25rem 0 }
+    .hero h1{ font-size:clamp(2rem,2.5rem + 1vw,3.2rem); line-height:1.1; margin:.2rem 0 1rem }
+    .lede{ color:var(--muted); font-size:1.05rem }
     .cta{ display:flex; gap:.8rem; margin-top:1.25rem; flex-wrap:wrap }
-    .btn{ display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1rem; border:1px solid color-mix(in oklab, var(--text), transparent 80%); border-radius:.75rem; background:linear-gradient(180deg, color-mix(in oklab, var(--panel), transparent 15%), var(--panel)); color:var(--text); box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--text), transparent 85%); }
-    .btn.primary{ background:linear-gradient(180deg, color-mix(in oklab, var(--brand), transparent 60%), color-mix(in oklab, var(--brand), transparent 10%)); border-color:color-mix(in oklab, var(--brand), transparent 40%); box-shadow: 0 10px 30px -15px var(--ring), inset 0 0 0 1px color-mix(in oklab, var(--brand), transparent 60%); }
+    .btn{ display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1rem; border:1px solid color-mix(in oklab,var(--text),transparent 80%); border-radius:.75rem; background:linear-gradient(180deg,color-mix(in oklab,var(--panel),transparent 15%),var(--panel)); color:var(--text); box-shadow:inset 0 0 0 1px color-mix(in oklab,var(--text),transparent 85%) }
+    .btn.primary{ background:linear-gradient(180deg,color-mix(in oklab,var(--brand),transparent 60%),color-mix(in oklab,var(--brand),transparent 10%)); border-color:color-mix(in oklab,var(--brand),transparent 40%); box-shadow:0 10px 30px -15px var(--ring), inset 0 0 0 1px color-mix(in oklab,var(--brand),transparent 60%) }
     .btn:hover{ transform:translateY(-1px) }
 
     section{ padding:2rem 0 }
     .section-title{ display:flex; align-items:baseline; justify-content:space-between; gap:1rem; margin:.25rem 0 1rem }
     .section-title h2{ margin:0; font-size:1.6rem }
     .filters{ display:flex; gap:.4rem; flex-wrap:wrap }
-    .chip{ padding:.35rem .6rem; border:1px solid color-mix(in oklab, var(--text), transparent 80%); border-radius:.7rem; font-size:.85rem; cursor:pointer; user-select:none }
-    .chip[data-active="true"]{ background:color-mix(in oklab, var(--accent), transparent 85%); border-color:color-mix(in oklab, var(--accent), transparent 50%); color:var(--accent) }
+    .chip{ padding:.35rem .6rem; border:1px solid color-mix(in oklab,var(--text),transparent 80%); border-radius:.7rem; font-size:.85rem; cursor:pointer; user-select:none }
+    .chip[data-active="true"]{ background:color-mix(in oklab,var(--accent),transparent 85%); border-color:color-mix(in oklab,var(--accent),transparent 50%); color:var(--accent) }
 
-    .grid{ display:grid; grid-template-columns: repeat(12, 1fr); gap:1rem }
-    .card{ grid-column: span 6; background:var(--panel); border:1px solid color-mix(in oklab, var(--text), transparent 85%); border-radius:1rem; padding:1rem; transition:transform .2s ease; }
+    .grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:1rem }
+    .card{ grid-column:span 6; background:var(--panel); border:1px solid color-mix(in oklab,var(--text),transparent 85%); border-radius:1rem; padding:1rem; transition:transform .2s ease }
     .card:hover{ transform:translateY(-2px) }
     .card h3{ margin:.25rem 0 .2rem; font-size:1.05rem }
     .meta{ display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; font-size:.85rem; color:var(--muted) }
     .badges{ display:flex; gap:.35rem; flex-wrap:wrap; margin:.5rem 0 }
-    .badge{ padding:.25rem .5rem; border:1px solid color-mix(in oklab, var(--text), transparent 80%); border-radius:.5rem; font-size:.78rem; color:var(--muted) }
+    .badge{ padding:.25rem .5rem; border:1px solid color-mix(in oklab,var(--text),transparent 80%); border-radius:.5rem; font-size:.78rem; color:var(--muted) }
     .actions{ display:flex; gap:.5rem; margin-top:.6rem; flex-wrap:wrap }
 
-    .skills{ display:grid; grid-template-columns: repeat(12, 1fr); gap:1rem }
-    .skills .panel{ grid-column: span 4; background:var(--panel); border:1px solid color-mix(in oklab, var(--text), transparent 85%); border-radius:1rem; padding:1rem }
+    .skills{ display:grid; grid-template-columns:repeat(12,1fr); gap:1rem }
+    .skills .panel{ grid-column:span 4; background:var(--panel); border:1px solid color-mix(in oklab,var(--text),transparent 85%); border-radius:1rem; padding:1rem }
     .skills ul{ margin:.4rem 0 0 .9rem }
 
-    .timeline{ border-left:2px dashed color-mix(in oklab, var(--text), transparent 80%); padding-left:1rem }
+    .timeline{ border-left:2px dashed color-mix(in oklab,var(--text),transparent 80%); padding-left:1rem }
     .timeline .item{ margin-bottom:1rem }
     .timeline .when{ font-size:.85rem; color:var(--muted) }
 
-    .contact{ display:grid; grid-template-columns: .9fr 1.1fr; gap:1rem }
+    .contact{ display:grid; grid-template-columns:.9fr 1.1fr; gap:1rem }
     .kpi{ display:flex; gap:1rem }
-    .kpi .k{ background:var(--panel); border:1px solid color-mix(in oklab, var(--text), transparent 85%); border-radius:.9rem; padding:.8rem 1rem; }
+    .kpi .k{ background:var(--panel); border:1px solid color-mix(in oklab,var(--text),transparent 85%); border-radius:.9rem; padding:.8rem 1rem }
     .k .v{ font-weight:800; font-size:1.3rem }
     form{ display:grid; gap:.6rem }
-    input, textarea{ background:var(--panel); color:var(--text); border:1px solid color-mix(in oklab, var(--text), transparent 80%); border-radius:.6rem; padding:.7rem }
-    input:focus, textarea:focus{ outline:2px solid var(--ring); border-color:transparent }
+    input,textarea{ background:var(--panel); color:var(--text); border:1px solid color-mix(in oklab,var(--text),transparent 80%); border-radius:.6rem; padding:.7rem }
+    input:focus,textarea:focus{ outline:2px solid var(--ring); border-color:transparent }
 
     footer{ padding:2rem 0 3rem; color:var(--muted) }
 
-    @media (max-width: 900px){
-      .hero{ grid-template-columns: 1fr; }
-      .grid .card, .skills .panel{ grid-column: span 12; }
-      .contact{ grid-template-columns: 1fr }
+    @media (max-width:900px){
+      .hero{ grid-template-columns:1fr }
+      .grid .card, .skills .panel{ grid-column:span 12 }
+      .contact{ grid-template-columns:1fr }
     }
   </style>
 </head>
@@ -100,7 +94,7 @@
     <div class="container">
       <nav aria-label="Primary">
         <div class="brand">
-          <span style="width:10px;height:10px;border-radius:50%;background:var(--brand);display:inline-block;box-shadow:0 0 0 6px color-mix(in oklab, var(--brand), transparent 80%)"></span>
+          <span style="width:10px;height:10px;border-radius:50%;background:var(--brand);display:inline-block;box-shadow:0 0 0 6px color-mix(in oklab,var(--brand),transparent 80%)"></span>
           <span>Luke Kryka</span>
           <span class="pill" id="availability">Open to roles</span>
         </div>
@@ -118,13 +112,14 @@
   <main class="container">
     <section class="hero" aria-labelledby="intro-heading">
       <div>
-        <p class="pill" aria-label="Role">Software Engineer · Backend / Full‑stack</p>
-        <h1 id="intro-heading">I build reliable, delightful software — and ship.</h1>
-        <p class="lede">I’ve led and contributed to projects from data-heavy services to polished UIs. I value clean architecture, fast feedback loops, and pragmatic DX. I’m currently exploring opportunities where I can own problems end‑to‑end.</p>
+        <p class="pill" aria-label="Role">Data Analyst · Python / SQL / BI</p>
+        <h1 id="intro-heading">Projects, skills, and contact information.</h1>
+        <p class="lede">Focused on data analysis, reporting, and dashboards. Open to opportunities.</p>
         <div class="cta">
           <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn" href="lukekryka8@gmail.com">Email Me</a>
-          <a class="btn" href="www.linkedin.com/in/luke-kryka" rel="noopener" target="_blank">LinkedIn</a>
+          <a class="btn" href="mailto:lukekryka8@gmail.com">Email Me</a>
+          <a class="btn" href="https://www.linkedin.com/in/luke-kryka" rel="noopener" target="_blank">LinkedIn</a>
+          <a class="btn" href="https://github.com/LukeKryka" rel="noopener" target="_blank">GitHub</a>
           <button class="btn" id="copyEmail">Copy Email</button>
         </div>
       </div>
@@ -136,7 +131,7 @@
         </div>
         <div class="card" style="margin-top:1rem">
           <strong>Resume</strong>
-          <p class="lede">Download a concise, recruiter‑ready PDF.</p>
+          <p class="lede">Download a concise PDF.</p>
           <div class="actions">
             <a class="btn primary" href="/resume.pdf">Download PDF</a>
             <a class="btn" href="/resume-onepage.pdf">One‑page</a>
@@ -164,17 +159,17 @@
       <div class="skills">
         <div class="panel"><strong>Languages</strong>
           <ul>
-            <li>TypeScript, JavaScript, Python, Go, SQL</li>
+            <li>Python, SQL, JavaScript</li>
           </ul>
         </div>
         <div class="panel"><strong>Frameworks</strong>
           <ul>
-            <li>React, Node.js, Express, Next.js, Flask/FastAPI</li>
+            <li>Pandas, NumPy, FastAPI, React</li>
           </ul>
         </div>
-        <div class="panel"><strong>Platforms & DevOps</strong>
+        <div class="panel"><strong>Platforms & BI</strong>
           <ul>
-            <li>AWS, Docker, GitHub Actions, Terraform, Postgres</li>
+            <li>Postgres, Excel, Power BI / Tableau, GitHub Actions</li>
           </ul>
         </div>
       </div>
@@ -184,14 +179,14 @@
       <div class="section-title"><h2 id="experience-heading">Experience</h2></div>
       <div class="timeline" aria-label="Experience timeline">
         <div class="item">
-          <div><strong>Company Name</strong> · Software Engineer</div>
+          <div><strong>Role</strong> · Data Analyst</div>
           <div class="when">2023 — Present</div>
-          <div>Shipped X that improved Y by Z%. Led A, collaborated on B, introduced C.</div>
+          <div>Dashboards, reporting, data quality, and automation.</div>
         </div>
         <div class="item">
-          <div><strong>Company/Project</strong> · Role</div>
+          <div><strong>Prior Experience</strong></div>
           <div class="when">2021 — 2023</div>
-          <div>Designed and built ...</div>
+          <div>Analysis and tools to support decision‑making.</div>
         </div>
       </div>
     </section>
@@ -199,17 +194,17 @@
     <section id="contact" class="contact" aria-labelledby="contact-heading">
       <div>
         <div class="section-title"><h2 id="contact-heading">Get in touch</h2></div>
-        <p class="lede">Recruiters and hiring managers: for interviews, referrals, or code samples, email me or use the form. I usually respond within 24–48 hours.</p>
+        <p class="lede">Email or message on LinkedIn.</p>
         <ul>
-          <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
-          <li>LinkedIn: <a href="www.linkedin.com/in/luke-kryka" target="_blank" rel="noopener">your-handle</a></li>
-          <li>GitHub: <a href="https://github.com/LukeKryka" target="_blank" rel="noopener">@your-username</a></li>
+          <li>Email: <a href="mailto:lukekryka8@gmail.com">lukekryka8@gmail.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/luke-kryka" target="_blank" rel="noopener">luke-kryka</a></li>
+          <li>GitHub: <a href="https://github.com/LukeKryka" target="_blank" rel="noopener">@LukeKryka</a></li>
         </ul>
       </div>
       <div>
         <form action="https://formspree.io/f/your-form-id" method="POST">
-          <input type="text" name="name" placeholder="Luke Kryka" required />
-          <input type="email" name="email" placeholder="lukekryka8@gmail.com" required />
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
           <textarea name="message" rows="5" placeholder="How can I help?" required></textarea>
           <button class="btn primary" type="submit">Send</button>
         </form>
@@ -233,32 +228,32 @@
       projects: [
         {
           title: "Repo-Landing-Page",
-          blurb: "Beautiful GitHub portfolio generator with JSON-driven projects and dark mode.",
+          blurb: "GitHub portfolio generator with JSON-driven projects and dark mode.",
           tags: ["web"],
           stack: ["HTML", "CSS", "JavaScript"],
           repo: "LukeKryka/repo-landing-page",
-          demo: "https://LukeKryka.github.io/repo-landing-page/",
-          highlights: ["Responsive, accessible UI", "SEO & Open Graph", "Light/dark theme toggle"],
+          demo: "https://lukekryka.github.io/repo-landing-page/",
+          highlights: ["Responsive UI", "SEO & Open Graph", "Light/dark theme"],
           featured: true
         },
         {
           title: "Data-Pipeline",
-          blurb: "Event-driven ETL on AWS with serverless components and IaC.",
+          blurb: "Event-driven ETL with serverless components and IaC.",
           tags: ["backend", "data"],
           stack: ["Python", "AWS", "Terraform"],
-          repo: "your-username/data-pipeline",
+          repo: "", // TODO: add repo when ready
           demo: null,
-          highlights: [">1B records processed", "~40% cost reduction", "Observability with metrics"],
+          highlights: ["Scalable", "Cost-aware", "Observability"],
           featured: true
         },
         {
           title: "ML-Classifier",
-          blurb: "FastAPI microservice serving a lightweight classifier with monitoring.",
+          blurb: "FastAPI microservice serving a lightweight classifier.",
           tags: ["data", "backend"],
           stack: ["FastAPI", "Docker", "Postgres"],
-          repo: "your-username/ml-classifier",
-          demo: "https://ml-classifier.example.com",
-          highlights: ["p95 < 120ms", "A/B test harness", "CI/CD via GitHub Actions"],
+          repo: "", // TODO: add repo when ready
+          demo: null,
+          highlights: ["Low latency", "A/B harness", "CI/CD"],
           featured: false
         }
       ]
@@ -271,7 +266,6 @@
       document.documentElement.dataset.theme = current === 'light' ? 'dark' : 'light';
       localStorage.setItem('theme', document.documentElement.dataset.theme);
     });
-    // Respect saved theme
     const saved = localStorage.getItem('theme');
     if(saved){ document.documentElement.dataset.theme = saved; }
 
@@ -287,9 +281,8 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('kYears').textContent = (new Date().getFullYear() - config.startedYear).toString();
 
-    // Availability pill
     const availability = document.getElementById('availability');
-    availability.textContent = config.openToWork ? 'Open to roles' : 'Heads down / Not seeking';
+    availability.textContent = config.openToWork ? 'Open to roles' : 'Not seeking';
     availability.style.background = config.openToWork ? 'color-mix(in oklab, var(--ok), transparent 85%)' : 'color-mix(in oklab, var(--warn), transparent 85%)';
     availability.style.color = config.openToWork ? 'var(--ok)' : 'var(--warn)';
     availability.style.borderColor = config.openToWork ? 'color-mix(in oklab, var(--ok), transparent 50%)' : 'color-mix(in oklab, var(--warn), transparent 50%)';
@@ -304,7 +297,7 @@
         <div class="meta">${p.featured ? '<span class="pill">Featured</span>' : ''}</div>
         <h3>${p.title}</h3>
         <p class="lede">${p.blurb}</p>
-        <div class="badges">${p.stack.map(s=>`<span class="badge">${s}</span>`).join('')}</div>
+        <div class="badges">${p.stack.map(s=>`<span class=\"badge\">${s}</span>`).join('')}</div>
         <ul style="margin:.3rem 0 0 .95rem">${p.highlights.map(h=>`<li>${h}</li>`).join('')}</ul>
         <div class="actions">
           ${p.repo ? `<a class="btn" href="https://github.com/${p.repo}" target="_blank" rel="noopener">GitHub</a>`:''}
@@ -319,11 +312,9 @@
       list.forEach(p => grid.appendChild(projectCard(p)));
     }
 
-    // Default sort: featured first, then by title
     const sorted = [...config.projects].sort((a,b)=> (Number(b.featured) - Number(a.featured)) || a.title.localeCompare(b.title));
     renderProjects(sorted);
 
-    // Filters
     document.querySelectorAll('.chip').forEach(ch => ch.addEventListener('click', () => {
       document.querySelectorAll('.chip').forEach(c=>c.dataset.active='false');
       ch.dataset.active = 'true';
@@ -335,7 +326,7 @@
       })
     }))
 
-    // ===== GitHub Stats (unauthenticated, public only) =====
+    // ===== GitHub Stats =====
     async function ghJSON(url){
       const res = await fetch(url, { headers: { 'Accept': 'application/vnd.github+json' }});
       if(!res.ok) throw new Error('GitHub API failed');
@@ -344,16 +335,11 @@
 
     async function hydrateGitHub(){
       try{
-        // User KPIs
         const user = await ghJSON(`https://api.github.com/users/${config.githubUser}`);
         document.getElementById('kRepos').textContent = user.public_repos;
-
-        // Calculate stars across repos (first 100)
         const repos = await ghJSON(`https://api.github.com/users/${config.githubUser}/repos?per_page=100&sort=updated`);
         const totalStars = repos.reduce((sum,r)=> sum + (r.stargazers_count||0), 0);
         document.getElementById('kStars').textContent = totalStars;
-
-        // Per‑project stars
         [...grid.querySelectorAll('[data-stars]')].forEach(async (el, idx) => {
           const p = sorted[idx];
           if(!p || !p.repo) return;
@@ -368,7 +354,7 @@
       }
     }
 
-    if(config.githubUser !== 'LukeKryka') hydrateGitHub();
+    hydrateGitHub();
 
     // ===== Structured Data (SEO) =====
     const ld = {
@@ -379,19 +365,13 @@
       "email": `mailto:${config.email}`,
       "sameAs": [
         `https://github.com/${config.githubUser}`,
-        "www.linkedin.com/in/luke-kryka"
+        "https://www.linkedin.com/in/luke-kryka"
       ]
     };
     const s = document.createElement('script');
     s.type = 'application/ld+json';
     s.textContent = JSON.stringify(ld);
     document.head.appendChild(s);
-
-    // ===== Optional: Analytics (Plausible) =====
-    // const an = document.createElement('script');
-    // an.defer = true; an.setAttribute('data-domain', 'your-username.github.io');
-    // an.src = 'https://plausible.io/js/script.js';
-    // document.head.appendChild(an);
   </script>
 </body>
 </html>
